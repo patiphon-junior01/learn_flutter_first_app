@@ -11,3 +11,23 @@ go get .
 main.go อ่านบรรทัดที่  33
 
 # go run .
+
+# ระหว่างนี้ตอนเรียนก็ pull มาบ่อยๆนะ
+
+# มาต่อกันกับการใช้งานหรือสร้างฐานข้อมูลนะ
+อันดับเเรกเลยจะต้องมี extention 
+Thunder Client ให้โหลดมานะ
+
+จากนั้น ส่งข้อมูล เป็น json 
+{
+    "username" : "manu",
+    "password" : "123",
+    "avatar" : "test",
+    "fullname" : "test"
+}
+
+
+ด้วย url ที่เรา run 
+ 
+
+# อย่าลืม method เป็น POST เน้อ
