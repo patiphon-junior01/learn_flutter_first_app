@@ -68,10 +68,20 @@ func main() {
     // create data
     db.Create(&user);
 
-    c.JSON(http.StatusOK, gin.H{
-      "message": json,
-      "encrypt": encryptedPassword,
-    })
+// check insert data to structure
+    if(user.ID > 0) {
+      c.JSON(http.StatusOK, gin.H{
+        "message": "Finish insert data",
+        "status code" : 201
+      })
+    }else {
+      c.JSON(http.StatusOK, gin.H{
+        "message": "Server Error",
+        "status code" : 500
+      })
+    }
+
+   
   })
 
 	// get
