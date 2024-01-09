@@ -56,13 +56,18 @@ func main() {
     // c.JSON(http.StatusOK, gin.H{"status": "you are logged in"})
     encryptedPassword, _ := bcrypt.GenerateFromPassword([]byte(json.Password), 10);
 
+    // set str data
     user := Tbl_user{
-      json.Username,
-      encryptedPassword,
-      json.Avatar,
-      json.Fullname,
+      Username: json.Username,
+      Password: string(encryptedPassword),
+      Avatar: json.Avatar,
+      Fullname: json.Fullname,
     }
-    
+
+
+    // create data
+    db.Create(&user);
+
     c.JSON(http.StatusOK, gin.H{
       "message": json,
       "encrypt": encryptedPassword,
