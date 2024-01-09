@@ -75,12 +75,12 @@ func main() {
     if(user.ID > 0) {
       c.JSON(http.StatusOK, gin.H{
         "message": "Finish insert data",
-        "status code" : 201
+        "status code" : 201,
       })
     }else {
       c.JSON(http.StatusOK, gin.H{
         "message": "Server Error",
-        "status code" : 500
+        "status code" : 500,
       })
     }
 
