@@ -29,6 +29,9 @@ type Tbl_user struct {
 func main() {
 
 	// connect mysql
+
+  // ถ้าไม่มีรหัสให้ใช้อันนี้นะจ๊ะเเต่ถ้ามีก็เปลี่ยนไปใช้ข้างล่างเลยอย่าลืมเปลี่ยนรหัสผ่ารด้วย
+	// dsn := "root@tcp(127.0.0.1:3306)/flutter_backend_go?charset=utf8mb4&parseTime=True&loc=Local"
 	dsn := "root:7890@tcp(127.0.0.1:3306)/flutter_backend_go?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
