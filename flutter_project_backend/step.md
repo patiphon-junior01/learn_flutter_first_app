@@ -28,6 +28,7 @@ Thunder Client ให้โหลดมานะ
 
 
 ด้วย url ที่เรา run 
- 
+ ตัวอย่างจาก code ที่ทำ 
+ localhost:8080/register
 
 # อย่าลืม method เป็น POST เน้อ
