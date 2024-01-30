@@ -11,6 +11,7 @@ import (
 	"gorm.io/gorm"
   "golang.org/x/crypto/bcrypt"
 	"github.com/golang-jwt/jwt"
+  "github.com/gin-contrib/cors"
 )
 
 var hmacSampleSecret []byte
@@ -40,6 +41,8 @@ type Tbl_user struct {
 
 func main() {
 
+
+
 	// connect mysql
 
   // ถ้าไม่มีรหัสให้ใช้อันนี้นะจ๊ะเเต่ถ้ามีก็เปลี่ยนไปใช้ข้างล่างเลยอย่าลืมเปลี่ยนรหัสผ่ารด้วย
@@ -54,6 +57,12 @@ func main() {
 
   r := gin.Default()
 
+  //Use Cors
+  config := cors.DefaultConfig()
+  config.AllowAllOrigins = true
+  config.AllowCredentials = true
+  config.AddAllowHeaders("authorization")
+  r.Use(cors.New(config))
 	// post
 	r.POST("/register", func(c *gin.Context) {
 

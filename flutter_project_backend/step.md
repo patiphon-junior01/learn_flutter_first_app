@@ -31,4 +31,4 @@ Thunder Client ให้โหลดมานะ
  ตัวอย่างจาก code ที่ทำ 
  localhost:8080/register
 
-# อย่าลืม method เป็น POST เน้อ
+# อย่าลืม method เป็น POST เน้อ!!
