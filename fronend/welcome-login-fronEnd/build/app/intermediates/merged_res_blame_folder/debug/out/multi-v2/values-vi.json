@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\program1\\learndev\\learn_flutter_first_app\\fronend\\Welcome-Login-Signup-Page-Flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
+            "outputFile": "C:\\program1\\learndev\\learn_flutter_first_app\\fronend\\welcome-login-fronEnd\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\patip\\.gradle\\caches\\transforms-3\\5ca2207bec8ce0ac00426ba2daedd076\\transformed\\core-1.6.0\\res\\values-vi\\values-vi.xml",

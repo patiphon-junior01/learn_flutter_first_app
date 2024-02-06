@@ -1,4 +1,4 @@
-#Tue Jan 09 18:35:46 ICT 2024
-base.0=C\:\\program1\\learndev\\learn_flutter_first_app\\fronend\\Welcome-Login-Signup-Page-Flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Tue Feb 06 18:07:16 ICT 2024
+base.0=C\:\\program1\\learndev\\learn_flutter_first_app\\fronend\\welcome-login-fronEnd\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

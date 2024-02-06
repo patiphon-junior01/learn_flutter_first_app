@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
 import '../../Signup/signup_screen.dart';
-import '../../Welcome/welcome_screen.dart';
+import '../../Welcome_login/welcome_screen.dart';
 import '../../../api_provider.dart';
+import 'dart:async';
 import 'dart:convert';
 
 class LoginForm extends StatefulWidget {
@@ -27,15 +28,17 @@ class _LoginForm extends State<LoginForm> {
           // debug
           // print(rs.body);
           var isRes = jsonDecode(rs.body);
-          print(isRes['status']);
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const WelcomeScreen();
-              },
-            ),
-          );
+          print(isRes);
+          if (isRes['status'] == "ok") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const WelcomeScreen();
+                },
+              ),
+            );
+          }
         } else {
           print("server error");
         }

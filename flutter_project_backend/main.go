@@ -20,7 +20,7 @@ var hmacSampleSecret []byte
 type Register struct {
   Username string `json:"username" binding:"required"`
   Password string `json:"password" binding:"required"`
-  Avatar string `json:"avatar" binding:"required"`
+  Avatar string `json:"avatar"`
   Fullname string `json:"fullname" binding:"required"`
 }
 
@@ -63,6 +63,7 @@ func main() {
   config.AllowCredentials = true
   config.AddAllowHeaders("authorization")
   r.Use(cors.New(config))
+
 	// post
 	r.POST("/register", func(c *gin.Context) {
 
@@ -83,7 +84,7 @@ func main() {
     var userExist Tbl_user
     db.Where("username = ?", json.Username).First(&userExist)
     if userExist.ID > 0 {
-      c.JSON(http.StatusOK, gin.H{"status": "error", "message": "User Exists"})
+      c.JSON(http.StatusOK, gin.H{"status": 400, "message": "User Exists"})
       return
     }
 
@@ -95,7 +96,6 @@ func main() {
       Fullname: json.Fullname,
     }
 
-
     // create data
     db.Create(&user);
 
@@ -103,16 +103,14 @@ func main() {
     if(user.ID > 0) {
       c.JSON(http.StatusOK, gin.H{
         "message": "Finish insert data",
-        "status code" : 201,
+        "statuscode" : 201,
       })
     }else {
       c.JSON(http.StatusOK, gin.H{
         "message": "Server Error",
-        "status code" : 500,
+        "statuscode" : 500,
       })
     }
-
-   
   })
 
   r.POST("/login", func(c *gin.Context) {
